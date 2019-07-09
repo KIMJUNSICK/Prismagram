@@ -1,21 +1,21 @@
 type User {
   id: ID! @id
-  userName : String! @userName
-  email: String! @email
-  firstName: String! @defualt(value:"")
-  lastName: String!
-  bio : String
-  following : [User!]! @relation(name: "FollowRelation")
-  followers : [User!]! @relation(name: "FollowRelation")
+  userName: String! @unique
+  email: String! @unique
+  firstName: String @defualt(value: "")
+  lastName: String
+  bio: String
+  following: [User!]! @relation(name: "FollowRelation")
+  followers: [User!]! @relation(name: "FollowRelation")
   posts: [Post!]!
   likes: [Like!]!
-  comments : [Comment!]!
+  comments: [Comment!]!
 }
 
 type Post {
   id: ID! @id
-  user : User!
-  location : String
+  user: User!
+  location: String
   caption: String!
   files: [File!]!
   likes: [Like!]!
@@ -39,4 +39,18 @@ type File {
   id: ID! @id
   url: String!
   post: Post!
+}
+
+type Room {
+  id: ID! @id
+  participants: [User!]!
+  messages: [Message!]!
+}
+
+type Message {
+  id: ID! @id
+  text: String!
+  from: User! @relation(name: "From")
+  to: User! @relation(name: "To")
+  room: Room!
 }
