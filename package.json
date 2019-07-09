@@ -7,13 +7,16 @@
   "author": "Kim Jun Sik <jinaganda5@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^8.0.0",
     "graphql-yoga": "^1.18.0"
   },
   "scripts": {
     "dev": "nodemon --exec babel-node src/server.js"
   },
   "devDependencies": {
+    "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.0",
-    "@babel/node": "^7.5.0"
+    "@babel/node": "^7.5.0",
+    "@babel/preset-env": "^7.5.2"
   }
 }
