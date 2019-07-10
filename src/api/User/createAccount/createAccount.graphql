@@ -1,0 +1,13 @@
+type Query {
+  dummy: String!
+}
+
+type Mutation {
+  createAccount(
+    userName: String!
+    email: String!
+    firstName: String
+    lastName: String
+    bio: String
+  ): User!
+}
