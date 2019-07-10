@@ -1,4 +1,4 @@
-import { generateSecret } from "../../../utils";
+import { generateSecret, sendMails } from "../../../utils";
 import { prisma } from "../../../../generated/prisma-client";
 
 export default {
@@ -9,6 +9,7 @@ export default {
       console.log(loginSecret);
       try {
         await prisma.updateUser({ data: { loginSecret }, where: { email } });
+        sendMails(email, loginSecret);
         return true;
       } catch (error) {
         console.log(error);
