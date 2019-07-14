@@ -1,4 +1,5 @@
 # Prismagram
+
 Cloning Instagram with GraphQL + Prisma + React + React Native + etc . . .
 
 ## User Stories
@@ -14,7 +15,7 @@ Cloning Instagram with GraphQL + Prisma + React + React Native + etc . . .
 - [x] Edit my profile
 - [x] See user profile
 - [x] See My profile
-- [ ] See the full post
+- [x] See the full post
 - [ ] Upload a post
 - [ ] Edit the post (Delete)
 - [ ] See the feed
