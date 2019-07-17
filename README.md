@@ -16,6 +16,10 @@ Cloning Instagram with GraphQL + Prisma + React + React Native + etc . . .
 - [x] See user profile
 - [x] See My profile
 - [x] See the full post
-- [ ] Upload a post
-- [ ] Edit the post (Delete)
-- [ ] See the feed
+- [x] Upload a post
+- [x] Edit the post (Delete)
+- [x] See the feed
+- [ ] See rooms
+- [ ] See room
+- [ ] Send private Message
+- [ ] Receive Message (RealTime)
