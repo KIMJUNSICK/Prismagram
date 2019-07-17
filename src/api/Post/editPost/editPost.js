@@ -25,7 +25,7 @@ export default {
           return prisma.deletePost({ id });
         }
       } else {
-        throw Error("YOU CAN'T DO THAT!");
+        throw Error("YOU Can't do that! because you're not Creator");
       }
     }
   }

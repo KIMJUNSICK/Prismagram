@@ -9,5 +9,5 @@ type Mutation {
     location: String
     caption: String
     action: ACTIONS!
-  ): Post
+  ): Post!
 }
