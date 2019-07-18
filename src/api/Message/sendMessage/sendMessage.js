@@ -28,9 +28,9 @@ export default {
 
       const getTo = room.participants.filter(
         participant => participant.id !== user.id
-      );
+      )[0];
 
-      return await prisma.createMessage({
+      return prisma.createMessage({
         room: {
           connect: {
             id: room.id
@@ -44,7 +44,7 @@ export default {
         },
         to: {
           connect: {
-            id: roomId ? getTo[0].id : toId
+            id: roomId ? getTo.id : toId
           }
         }
       });

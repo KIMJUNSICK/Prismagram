@@ -1,5 +1,6 @@
 type User {
   id: ID! @id
+  avatar: String
   userName: String! @unique
   email: String! @unique
   firstName: String @defualt(value: "")
