@@ -1,5 +1,4 @@
 import { prisma } from "../../../../generated/prisma-client";
-import { ROOM_FRAGMENT } from "../../../fragments";
 
 export default {
   Query: {
@@ -14,11 +13,7 @@ export default {
       });
 
       if (canSeeMe) {
-        return prisma
-          .room({
-            id
-          })
-          .$fragment(ROOM_FRAGMENT);
+        return prisma.room({ id });
       } else {
         throw Error("YOU are not in any room");
       }
