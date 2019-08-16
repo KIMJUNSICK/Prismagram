@@ -1,4 +1,4 @@
-endpoint: https://us1.prisma.sh/kim-jun-sik-9182b5/prismagram/dev
+endpoint: ${env:PRISMA_ENDPOINT}
 datamodel: datamodel.prisma
 
 generate:
